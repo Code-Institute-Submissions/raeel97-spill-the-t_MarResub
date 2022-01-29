@@ -9,8 +9,10 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.CharField(max_length=200, unique=True)
-    featured_image =  models.URLField('image', max_length=1024, null=True,
+    image_url = models.URLField('image', max_length=1024, null=True,
                                          blank=True, default='placeholder')
+    image = models.ImageField('image', null=True, blank=True,
+                                       default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
