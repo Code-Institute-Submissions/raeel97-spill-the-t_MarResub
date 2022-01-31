@@ -199,3 +199,33 @@ body {
     border: 1px solid #ffa6dd;
     border-radius: 5px;
 }
+
+.glow {
+    font-weight: 900;
+    color: black!important;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 0.2rem #fff, 0 0 0.3rem #fff, 0 0 0.4rem #e60073, 0 0 0.5rem #e60073, 0 0 0.6rem #e60073, 0 0 0.7rem #e60073, 0 0 0.8rem #e60073;
+    }
+    to {
+      text-shadow: 0 0 0.2rem #fff, 0 0 0.3rem #ffffff, 0 0 0.4rem #4dc7ff, 0 0 0.5rem #4dbeff, 0 0 0.6rem #4da9ff, 0 0 0.7rem #4da9ff, 0 0 0.8rem #4da9ff;
+    }
+  }
+
+.edit-delete {
+    float: right;
+    margin-right: 5px;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: green;
+}
