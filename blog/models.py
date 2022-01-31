@@ -11,8 +11,6 @@ class Post(models.Model):
     author = models.CharField(max_length=200, unique=True)
     image_url = models.URLField('image', max_length=1024, null=True,
                                          blank=True, default='placeholder')
-    image = models.ImageField('image', null=True, blank=True,
-                                       default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
