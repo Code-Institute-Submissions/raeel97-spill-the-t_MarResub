@@ -26,13 +26,17 @@ body {
     padding-bottom: 10px;
 }
 
-.container {
+.container-override {
     background-color: #fff;
     border-radius: 25px;
     margin-top: 10%;
     padding-top: 5%;
     margin-bottom: 10%;
     padding-bottom: 5%;
+}
+
+.container- {
+    
 }
 
 .img-block {

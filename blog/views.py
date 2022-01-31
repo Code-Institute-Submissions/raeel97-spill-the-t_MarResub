@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, ContactForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -49,6 +50,7 @@ class PostDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = post
+            messages.success(request, 'Commented added for approval successfully.')
             comment.save()
         else:
             comment_form = CommentForm()
@@ -83,6 +85,7 @@ def contact(request):
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             contact_form.save()
+            messages.success(request, 'Message sent successfully!')
             return redirect('home')
             
     contact_form = ContactForm()
