@@ -58,7 +58,8 @@ body {
 }
 
 .main-bg {
-    background-color: #f9fafc98;
+    background-color: #f9fafc36;
+    height: inherit;
 }
 
 .card {
@@ -67,7 +68,7 @@ body {
 }
 
 .card-body-view {
-    border: 3px solid #FF66C4;
+    border: 3px solid #ffa6dd9c;
     border-radius: 25px;
 }
 
