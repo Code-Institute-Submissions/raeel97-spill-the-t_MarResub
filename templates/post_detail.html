@@ -11,8 +11,8 @@
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="">Written by: {{ post.author }} | {{ post.shared_on }}
                     {% if user.is_superuser %}
-                    <a href="#" class="text-danger"><i class="fas fa-trash-alt"></i></a>
-                    <a href="#" class="edit"><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'future_feature' %}" class="text-danger"><i class="fas fa-trash-alt"></i></a>
+                    <a href="{% url 'future_feature' %}" class="edit"><i class="fas fa-edit"></i></a>
                     {% endif %}
                 </p>
                 
