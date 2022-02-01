@@ -7,10 +7,15 @@ from django.contrib import messages
 
 
 # Create your views here.
+
+def homepage_view(request):
+    
+    return render(request, 'index.html')
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-shared_on')
-    template_name = 'index.html'
+    template_name = 'post_view.html'
     paginate_by = 6
 
 

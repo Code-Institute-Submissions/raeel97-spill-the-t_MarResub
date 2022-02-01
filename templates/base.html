@@ -36,6 +36,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'post_view' %}">Blog</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -50,7 +53,7 @@
                    
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link nav-contact" href="{% url 'contact' %}">Contact</a>
                     </li>
                     {% if user.is_superuser %}
                     <li class="nav-item">
