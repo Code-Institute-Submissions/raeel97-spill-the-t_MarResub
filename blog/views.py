@@ -12,6 +12,10 @@ def homepage_view(request):
     
     return render(request, 'index.html')
 
+def future_feature(request):
+    
+    return render(request, 'future_feature.html')
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-shared_on')

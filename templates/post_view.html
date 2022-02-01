@@ -32,8 +32,8 @@
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}
                                 {% if user.is_superuser %}
-                                <a href="#" class="edit-delete text-danger"><i class="fas fa-trash-alt"></i></a>
-                                <a href="#" class="edit-delete edit"><i class="fas fa-edit"></i></a>
+                                <a href="{% url 'future_feature' %}" class="edit-delete text-danger"><i class="fas fa-trash-alt"></i></a>
+                                <a href="{% url 'future_feature' %}" class="edit-delete edit"><i class="fas fa-edit"></i></a>
                                 {% endif %}
                             </p>
                             

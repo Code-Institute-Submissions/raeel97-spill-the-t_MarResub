@@ -237,3 +237,7 @@ body {
 .nav-contact {
     color: #e60073 !important;
 }
+
+.center-button {
+    text-align: center;
+}
