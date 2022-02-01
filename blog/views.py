@@ -2,7 +2,11 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, ContactForm
+from django.contrib.auth.models import User
+from django.views.generic.edit import CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from .forms import CommentForm, ContactForm, PostForm
 from django.contrib import messages
 
 
@@ -100,3 +104,18 @@ def contact(request):
     contact_form = ContactForm()
     context = {'contact_form': contact_form}
     return render(request, 'contact.html', context)
+
+
+class PostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'create_post.html'
+    success_message = "Your post has sucessfully been created!"
+
+    def get_success_url(self):
+        return reverse('post_view', kwargs={'slug': self.object.slug})
+
+    def form_valid(self, form):
+        form.instance.creator = self.request.user
+        print(form.cleaned_data)
+        return super().form_valid(form)

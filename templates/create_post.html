@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="overlay"></div>
+<<div class="container container-override">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h1>CREATE A RECIPE</h1>
+            <strong>Please don't use this form on tablet or mobile!</strong>
+            <br><br>
+            <form method="POST"  ></form>
+                        {% crispy form %}
+                        {% csrf_token %}
+                <button class="btn btn-signup rightn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

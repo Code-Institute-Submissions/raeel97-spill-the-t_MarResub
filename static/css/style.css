@@ -241,3 +241,7 @@ body {
 .center-button {
     text-align: center;
 }
+
+.note-editor, .note-frame, .panel, .panel-default {
+    max-width: fit-content;
+}
