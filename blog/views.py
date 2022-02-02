@@ -1,13 +1,15 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.http import HttpResponseRedirect
-from .models import Post
-from django.contrib.auth.models import User
 from django.views.generic.edit import CreateView
+# from django.views.generic.base import TemplateView
+# from django.urls import reverse_lazy
+# from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from .forms import CommentForm, ContactForm, PostForm
 from django.contrib import messages
+from .models import Post
+from .forms import CommentForm, ContactForm, PostForm
+
 
 
 # Create your views here.
@@ -99,7 +101,7 @@ def contact(request):
         if contact_form.is_valid():
             contact_form.save()
             messages.success(request, 'Message sent successfully!')
-            return redirect('home')
+            return redirect('post_view')
             
     contact_form = ContactForm()
     context = {'contact_form': contact_form}
@@ -113,9 +115,8 @@ class PostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     success_message = "Your post has sucessfully been created!"
 
     def get_success_url(self):
-        return reverse('post_view', kwargs={'slug': self.object.slug})
+        return reverse('post_detail', kwargs={'slug': self.object.slug})
 
     def form_valid(self, form):
-        form.instance.creator = self.request.user
         print(form.cleaned_data)
         return super().form_valid(form)
