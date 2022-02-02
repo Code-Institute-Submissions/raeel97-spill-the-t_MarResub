@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # from django.views.generic.base import TemplateView
 # from django.urls import reverse_lazy
 # from django.contrib.auth.models import User
@@ -112,7 +112,7 @@ class PostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
-    success_message = "Your post has sucessfully been created!"
+    success_message = "Your post has successfully been created!"
 
     def get_success_url(self):
         return reverse('post_detail', kwargs={'slug': self.object.slug})
@@ -120,3 +120,13 @@ class PostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     def form_valid(self, form):
         print(form.cleaned_data)
         return super().form_valid(form)
+
+
+class PostUpdate(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'update_post.html'
+    success_message = "Your post has successfully been updated!"
+
+    def get_success_url(self):
+        return reverse('post_detail', kwargs={'slug': self.object.slug})

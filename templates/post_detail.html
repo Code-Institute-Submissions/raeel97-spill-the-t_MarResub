@@ -12,7 +12,7 @@
                 <p class="">Written by: {{ post.author }} | {{ post.shared_on }}
                     {% if user.is_superuser %}
                     <a href="{% url 'future_feature' %}" class="text-danger"><i class="fas fa-trash-alt"></i></a>
-                    <a href="{% url 'future_feature' %}" class="edit"><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'update' post.slug %}" role="button" class="edit"><i class="fas fa-edit"></i></a>
                     {% endif %}
                 </p>
                 

@@ -8,5 +8,6 @@ urlpatterns = [
     path('postview/', views.PostList.as_view(), name='post_view'),
     path('contact/', views.contact, name='contact'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    path('<slug:slug>/update/', views.PostUpdate.as_view(), name='update'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
 ]
