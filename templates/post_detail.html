@@ -24,7 +24,7 @@
             <!-- The featured image URL goes in the src attribute -->
             {% if "placeholder" in post.image_url%}
             <img class="card-img-top" src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/no-image.jpg"
-                alt="1">
+                alt="no image found">
             {% else %}
             <img class="card-img-top" src="{{ post.image_url }}">
             {% endif %}

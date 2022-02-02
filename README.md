@@ -93,7 +93,7 @@ The menu has the following navigation links:
 - Title leads to home page
 - Home leads to home page
 - Contact leads to contact page
-- blog leads to blog view page
+- Blog leads to blog view page
 - Each blog post leads to blog page
 
 
@@ -121,39 +121,39 @@ The main pages of the website are:
 ### Wireframes
 
 Home Page
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_homepage.PNG">
 <br>
 Blog Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_blogview.PNG">
 <br>
 Blog post Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_blogpostview.PNG">
 <br>
 Contact Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_contactform.PNG">
 <br>
 Future Feature Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_futurefeature.PNG">
 <br>
 404 error Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_404error.PNG">
 <br>
-Register Page
+Sign Up Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_signup.PNG">
 <br>
-Log in Page
+Sign in Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_signin.PNG">
 <br>
-Log out Page
+Sign out Page
 <br>
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_signout.PNG">
 
 
 ## Surface
@@ -184,10 +184,11 @@ _Color Palette_
 - Ability for admin to approve comments in admin panel
 - Ability to sign in, sign out and register
 - Ability to view individual blog posts and like/unlike posts. 
+- Full CRUD functionality for blog posts for admin
     
 
 ## Features to Implement in the future 
-- Blog management tool for site admin to implement CRUD functionality on blog posts
+
 - Blog management tool for site admin to implement comment approval outside of admin panel
 - - Blog management tool for site admin to read and respond to contact queries
 
@@ -260,18 +261,18 @@ Sitemap screenshot
 The entirety of the testing was done manually. 
 
 PEP8 Flake tests, HTML and CSS Validators were also done! 
-html and CSS validator
 
 HTML Validation was done using W3C Nu HTML Validator:
-<img src="">
+Of the many errors found, most were contained within the post detail content block. 
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/htmlvalidate.PNG">
 <br>
 <br>
 CSS Validation was done using W3C Jigsaw Validator:
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/cssvalidate.PNG">
 <br>
 <br>
 Lighthouse testing was done using Chrome Developer Tools:
-<img src="">
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/lighthousetest.PNG">
 
 # Bugs
 When removing a blog post image and leaving it as blank, it breaks the image link instead of rendering default image. 
