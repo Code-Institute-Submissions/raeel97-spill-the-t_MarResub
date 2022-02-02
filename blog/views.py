@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # from django.views.generic.base import TemplateView
-# from django.urls import reverse_lazy
+from django.urls import reverse_lazy
 # from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
@@ -109,6 +109,7 @@ def contact(request):
 
 
 class PostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """Create and save a new blog post"""
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
@@ -123,6 +124,7 @@ class PostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 
 class PostUpdate(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """Update a blog post"""
     model = Post
     form_class = PostForm
     template_name = 'update_post.html'
@@ -130,3 +132,10 @@ class PostUpdate(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
     def get_success_url(self):
         return reverse('post_detail', kwargs={'slug': self.object.slug})
+
+
+class PostDelete(LoginRequiredMixin, DeleteView):
+    """Delete a blog post"""
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy("post_view")
