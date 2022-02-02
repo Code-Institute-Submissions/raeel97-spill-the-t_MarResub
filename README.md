@@ -203,11 +203,8 @@ Amazon Web Services is used for the hosting of all media and static files.
 <br>
 The database contains three models - Post, Comment and Contact. 
 
-![database]()<br>
+![database](https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/databaseschema.png)<br>
 
-Sitemap screenshot 
-
-![sitemap]()<br>
 
 ###
 
@@ -243,6 +240,7 @@ Sitemap screenshot
 ## Tools
 
 - [Balsamiq](https://balsamiq.com/) for wireframes
+- [Canva](https://www.canva.com/) for images
 - [Pixlr](https://pixlr.com/e/) for resizing images
 - [W3C Markup Validation Service](https://validator.w3.org/) for testing HTML code
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for testing CSS code
@@ -321,7 +319,7 @@ This project was deployed through Heroku in the following steps:
 
 
 ### Media
-[Image credits]()
+All images outside of the blog posts were sourced from Canva/ 
 
 
 
