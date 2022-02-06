@@ -34,4 +34,3 @@ class ContactAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sent_on',)
-

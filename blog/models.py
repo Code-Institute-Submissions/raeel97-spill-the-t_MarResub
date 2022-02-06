@@ -11,7 +11,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.CharField(max_length=200, unique=True)
     image_url = models.URLField('image', max_length=1024, null=True,
-                                         blank=True, default='placeholder')
+                                blank=True, default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -33,7 +33,6 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
-
 
 
 class Comment(models.Model):

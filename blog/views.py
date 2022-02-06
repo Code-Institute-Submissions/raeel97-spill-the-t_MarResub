@@ -7,20 +7,17 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, ContactForm, PostForm
-
 
 
 # Create your views here.
 
 def homepage_view(request):
-    
+
     return render(request, 'index.html')
 
-def future_feature(request):
-    
-    return render(request, 'future_feature.html')
 
 class PostList(generic.ListView):
     model = Post
@@ -65,7 +62,8 @@ class PostDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = post
-            messages.success(request, 'Commented added for approval successfully.')
+            messages.success(request,
+                             'Commented added for approval successfully.')
             comment.save()
         else:
             comment_form = CommentForm()
@@ -80,10 +78,11 @@ class PostDetail(View):
                 "comment_form": comment_form,
                 "liked": liked
             },
-        )        
+        )
+
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -102,7 +101,7 @@ def contact(request):
             contact_form.save()
             messages.success(request, 'Message sent successfully!')
             return redirect('post_view')
-            
+
     contact_form = ContactForm()
     context = {'contact_form': contact_form}
     return render(request, 'contact.html', context)

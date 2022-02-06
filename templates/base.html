@@ -55,11 +55,6 @@
                     <li class="nav-item">
                         <a class="nav-link nav-contact" href="{% url 'contact' %}">Contact</a>
                     </li>
-                    {% if user.is_superuser %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'future_feature' %}">Blog Management</a>
-                    </li>
-                    {% endif %}
                 </ul>
                 <span class="navbar-text glow">
                     All your Irish trans and gender diverse news in one convenient sip
