@@ -1,5 +1,5 @@
 # Spill The T
-## **Code Institute - Portfolio Project 4: _FullStack Toolkit Portfolio Project** 
+## **Code Institute - Portfolio Project 4: FullStack Toolkit Portfolio Project** 
 Spill The T is an django blog app inspired focusing on transgender and gender diverse news. 
 
 This web app will allow users to explore the fond memories of their childhood and purchase the products they have always dreamed of!
@@ -264,17 +264,25 @@ HTML Validation was done using W3C Nu HTML Validator:
 Of the many errors found, most were contained within the post detail content block. 
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/htmlvalidate.PNG">
 <br>
+W3C HTML link validator testing:  
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/link-validator.JPG">
+<br>
 <br>
 CSS Validation was done using W3C Jigsaw Validator:
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/cssvalidate.PNG">
 <br>
 <br>
 Lighthouse testing was done using Chrome Developer Tools:
-<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/lighthousetest.PNG">
+
+Mobile Test
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/mobile-lighthouse.JPG">
+
+Desktop Test
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/desktop-lighthouse.JPG">
 
 # Bugs
 When removing a blog post image and leaving it as blank, it breaks the image link instead of rendering default image. 
-<img src="">
+<img src="#"> 
 
 # Deployment
 ## Heroku Deployment
