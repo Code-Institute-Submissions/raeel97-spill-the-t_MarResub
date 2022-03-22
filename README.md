@@ -61,7 +61,36 @@ The primary goal of Spill The T is to enable users to peruse a number of transge
 
 Agile Development was used to plan the project. This was implemented using a kanban board in github issues and projects. 
 
+First the **user stories** were mapped to **issues**.
 <br>
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/create-issue.gif">
+
+<br>
+
+The new Github Projects feature was utilized for the kanban board. It was linked to the **spill-the-t repository.** 
+<br>
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/kanban-linked.jpg">
+
+<br>
+
+The issues where then linked to kanban board's **to do** column. 
+<br>
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/issue-to-board.gif">
+
+<br>
+
+When a user story was being worked on, its issue was moved from the **to do** column to the **in progress** and then onto the **done** column when the task was completed. 
+<br> 
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/issue-progress.gif">
+
+<br>
+
+The issue was then closed.  
+<br>
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/close-issue.gif">
+
+<br>
+
 
 [back to top](#Table-of-contents)
 <br>
