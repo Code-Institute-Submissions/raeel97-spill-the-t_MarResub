@@ -17,7 +17,6 @@ This web app will allow users to explore the fond memories of their childhood an
      + [Strategy](#Strategy)
      + [Scope](#Scope)
      + [Structure](#Structure)
-          + [Front end Pages](Front-end-Pages)
      + [Skeleton](#Skeleton)
           + [Wireframes](#Wireframes)
      + [Surface](#Surface)
@@ -150,6 +149,7 @@ The main pages of the website are:
 ### Wireframes
 
 Home Page
+<br>
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/wireframe_homepage.PNG">
 <br>
 Blog Page
@@ -285,33 +285,42 @@ The database contains three models - Post, Comment and Contact.
 <br>
 
 # Testing
-The entirety of the testing was done manually. 
+The entirety of the testing was done **manually**. 
 
-PEP8 Flake tests, HTML and CSS Validators were also done! 
+**PEP8 Flake** tests, **HTML and CSS Validators** were also done! 
 
-HTML Validation was done using W3C Nu HTML Validator:
-Of the many errors found, most were contained within the post detail content block. 
+HTML Validation was done using **W3C Nu HTML Validator**:
+Of errors found, most were contained within the **post detail content block** which is code that is **embedded from other sources**. 
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/htmlvalidate.PNG">
 <br>
-W3C HTML link validator testing:  
+
+**W3C HTML link validator** testing:  
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/link-validator.JPG">
 <br>
 <br>
-CSS Validation was done using W3C Jigsaw Validator:
+
+CSS Validation was done using **W3C Jigsaw Validator**:
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/cssvalidate.PNG">
 <br>
 <br>
-Lighthouse testing was done using Chrome Developer Tools:
 
-Mobile Test
+**Lighthouse** testing was done using **Chrome Developer Tools** :
+
+**Mobile** Test
+<br>
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/mobile-lighthouse.JPG">
+<br>
+<br>
 
-Desktop Test
+**Desktop** Test
+<br>
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/desktop-lighthouse.JPG">
+<br>
 
 # Bugs
 When removing a blog post image and leaving it as blank, it breaks the image link instead of rendering default image. 
-<img src="#"> 
+<br>
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/broken-image.JPG"> 
 
 # Deployment
 ## Heroku Deployment
