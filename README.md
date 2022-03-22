@@ -290,8 +290,7 @@ The entirety of the testing was done **manually**.
 **PEP8 Flake** tests, **HTML and CSS Validators** were also done! 
 
 HTML Validation was done using **W3C Nu HTML Validator**:
-Of errors found, most were contained within the **post detail content block** which is code that is **embedded from other sources**. 
-<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/htmlvalidate.PNG">
+Validation screenshots can be found [here](W3-page-validations.md)
 <br>
 
 **W3C HTML link validator** testing:  
