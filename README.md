@@ -24,7 +24,7 @@ This web app will allow users to explore the fond memories of their childhood an
      + [Existing Features](#Existing-Features)
      + [Features to Implement in the future](#Features-to-Implement-in-the-future)
 + [Database](#Database)
-+ [Testing](#Tests)
++ [Testing](#Testing)
 + [Bugs](#Bugs)
 + [Technologies Used](#Technologies-Used)
      + [Resources](#Resources)
