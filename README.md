@@ -312,6 +312,8 @@ Pep8 Validator testing was done, the only known errors that occured were on djan
 
 Pylint errors were ignored as these were not picked up in the pep8 validator!
 
+Other known errors or warnings were Missing module docstring/blank line at end of file and line too long. Errors not fixed would have broken code functionality if attempted.
+
 
 **Lighthouse** testing was done using **Chrome Developer Tools** :
 
