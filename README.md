@@ -60,6 +60,8 @@ The primary goal of Spill The T is to enable users to peruse a number of transge
 
 Agile Development was used to plan the project. This was implemented using a kanban board in github issues and projects. 
 
+[Here](https://github.com/users/raeel97/projects/1) is the link to the kanban board in question. 
+
 First the **user stories** were mapped to **issues**.
 <br>
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/create-issue.gif">
@@ -286,6 +288,7 @@ The database contains three models - Post, Comment and Contact.
 
 # Testing
 The entirety of the testing was done **manually**. 
+Manual testing can be found [here](testing.md)
 
 **PEP8 Flake** tests, **HTML and CSS Validators** were also done! 
 
@@ -303,6 +306,13 @@ CSS Validation was done using **W3C Jigsaw Validator**:
 <br>
 <br>
 
+Pep8 Validator testing was done, the only known errors that occured were on django generated python files:
+- 0002_auto_20220129_1228.py
+- 0003_contact.py
+
+Pylint errors were ignored as these were not picked up in the pep8 validator!
+
+
 **Lighthouse** testing was done using **Chrome Developer Tools** :
 
 **Mobile** Test
@@ -318,6 +328,10 @@ CSS Validation was done using **W3C Jigsaw Validator**:
 
 # Bugs
 When removing a blog post image and leaving it as blank, it breaks the image link instead of rendering default image. 
+<br>
+<img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/broken-image.JPG"> 
+
+Pages with summernote are not responsive. 
 <br>
 <img src="https://raeel97-spill-the-t.s3.eu-west-1.amazonaws.com/media/broken-image.JPG"> 
 
